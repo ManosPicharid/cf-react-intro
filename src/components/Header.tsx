@@ -1,4 +1,5 @@
 import CodingFactoryLogo from "./CodingFactoryLogo";
+import { Link } from "react-router";
 
 const Header = () => {
   return (
@@ -6,12 +7,32 @@ const Header = () => {
       <header className="bg-[#782024] fixed w-full">
         <div className="container mx-auto px-4 flex items-center justify-between">
           <CodingFactoryLogo />
-          <a
-            className="text-white hover:underline hover:underline-offset-4"
+          <nav className="flex gap-4">
+            {/* <a
             href="/"
+            className="text-white hover:underline hover:underline-offset-4"
           >
             Home
-          </a>
+          </a> */}
+            <Link
+              to="/"
+              className="text-white hover:underline hover:underline-offset-4"
+            >
+              Home
+            </Link>
+            <Link
+              to="examples/name-changer"
+              className="text-white hover:underline hover:underline-offset-4"
+            >
+              Name Changer
+            </Link>
+            <Link
+              to="examples/online-status"
+              className="text-white hover:underline hover:underline-offset-4"
+            >
+              Online Status
+            </Link>
+          </nav>
         </div>
       </header>
     </>
